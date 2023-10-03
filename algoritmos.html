@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Algoritmos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="barraLateral">
+				<div class="inner">
+                    <div>
+                        <!-- <button><a href="index.html"><img src="images/retroceder.png" alt=""></a></button> -->
+						<button><a href="index.html">Back</a></button>
+					</div>
+				</div>
+			</header>
+		<!-- Content -->
+			<div id="mainPag2">
+					<section id="one">
+						<header class="major">
+							<h1>Algunos algoritmos importantes...</h1>
+						</header>
+						<ol>
+							<li>
+								<strong>Algoritmo de Regresión Lineal:</strong>  
+								<ul>
+									<li>
+										<p><strong>Descripción:</strong> La regresión lineal es un algoritmo de aprendizaje automático utilizado para modelar la relación entre una variable dependiente (la variable que queremos predecir) y una o más variables independientes (atributos) mediante una ecuación lineal. El objetivo es encontrar la línea recta (en el caso de una sola característica) o un hiperplano (en el caso de múltiples características) que mejor se ajuste a los datos.</p>
+									</li>
+									<li>
+										<p><strong>Entradas:</strong>Variables Independientes: Son las entradas del modelo y representan las características o atributos de los datos. Pueden ser una o varias, dependiendo de la complejidad del problema.</p>
+									</li>
+									<li>
+										<p><strong>Salidas:</strong>Variable Dependiente (Variable Objetivo): Es la salida del modelo y representa la variable que se desea predecir.</p>
+									</li>
+									<li>
+										<p><strong>Cuándo se Usa:</strong></p>
+										<ul id = "listaConGuiones">
+											<li>
+												<p>La regresión lineal se utiliza cuando se sospecha que existe una relación lineal o aproximadamente lineal entre las características y la variable objetivo.</p>
+											</li>
+											<li>
+												<p>Es adecuada para problemas de regresión, donde se busca predecir un valor numérico continuo, como el precio de una casa, los ingresos de una persona o la temperatura.</p>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<p><strong>Tipo de Algoritmo:</strong>La regresión lineal es un algoritmo de aprendizaje supervisado, ya que se basa en datos etiquetados para aprender la relación entre las variables.</p>
+									</li>
+									<li>
+										<p><strong>Utilidad:</strong></p>
+										<ul id = "listaConGuiones">
+											<li>
+												<p>La regresión lineal es ampliamente utilizada en estadísticas y aprendizaje automático para modelar y predecir relaciones lineales en datos.</p>
+											</li>
+											<li>
+												<p>Es útil para comprender la relación entre las variables y hacer predicciones basadas en esa relación.</p>
+											</li>
+											<li>
+												<p>Puede ser utilizado en aplicaciones prácticas como la predicción de precios de bienes raíces, análisis de tendencias económicas, pronóstico del tiempo y más.</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<strong>Algoritmo de Regresión Logística:</strong>  
+								<ul>
+									<li>
+										<p><strong>Descripción:</strong> La regresión logística es un algoritmo de aprendizaje automático utilizado para problemas de clasificación.Se utiliza para predecir la probabilidad de que una instancia pertenezca a una de dos clases (clasificación binaria) o a una de varias clases (clasificación multiclase). La regresión logística utiliza una función logística (sigmoidal) para modelar las probabilidades y toma decisiones de clasificación en función de umbrales de probabilidad.</p>
+									</li>
+									<li>
+										<p><strong>Entradas:</strong>Variables Independientes: Son las entradas del modelo y representan las características o atributos utilizados para la clasificación.</p>
+									</li>
+									<li>
+										<p><strong>Salidas:</strong>Clase Predictiva: La salida del modelo es una etiqueta que representa la clase a la que se asigna una instancia en función de la probabilidad calculada.</p>
+									</li>
+									<li>
+										<p><strong>Cuándo se Usa:</strong></p>
+										<ul id = "listaConGuiones">
+											<li>
+												<p>La regresión logística se utiliza cuando se necesita realizar tareas de clasificación, como predecir si un correo electrónico es spam o no spam, si un paciente tiene una enfermedad o no, o clasificar documentos en categorías.</p>
+											</li>
+											<li>
+												<p>Es adecuada para problemas de clasificación binaria (dos clases) y clasificación multiclase (tres o más clases).</p>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<p><strong>Tipo de Algoritmo:</strong>La regresión logística es un algoritmo de aprendizaje supervisado, ya que se basa en datos etiquetados para aprender a clasificar instancias en categorías.</p>
+									</li>
+									<li>
+										<p><strong>Utilidad:</strong>La regresión logística es ampliamente utilizada en problemas de clasificación en una variedad de campos, como medicina, detección de fraudes, procesamiento de lenguaje natural y más.</p>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<strong>Algoritmo k-Nearest Neighbors (k-NN):</strong>  
+								<ul>
+									<li>
+										<p><strong>Descripción:</strong> El algoritmo k-Nearest Neighbors (k-NN) es un algoritmo de aprendizaje supervisado utilizado para problemas de clasificación y regresión. En el enfoque k-NN, un objeto se clasifica por mayoría de votos de sus vecinos más cercanos en el espacio de características. El "k" en k-NN representa el número de vecinos más cercanos que se toman en cuenta para tomar una decisión. Se recomienda que el número “k” sea impar/par dependiendo de la cantidad de categorías/clases entre las cuales queremos clasificar.
+										</p>
+									</li>
+									<li>
+										<p><strong>Entradas:</strong></p>
+										<ul id = "listaConGuiones">
+											<li>
+												<p>Contiene ejemplos de datos etiquetados, donde cada ejemplo consta de características de entrada y su respectiva etiqueta (en el caso de clasificación) o valor objetivo (en el caso de regresión).</p>
+											</li>
+											<li>
+												<p>Un parámetro (k) que define cuántos vecinos más cercanos se considerarán al tomar una decisión.</p>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<p><strong>Salidas:</strong>La salida es la etiqueta de clase que se asigna a un objeto en función de la mayoría de votos de sus vecinos más cercanos.</p>
+									</li>
+									<li>
+										<p><strong>Cuándo se Usa:</strong>k-NN se utiliza en problemas de clasificación cuando se busca asignar una instancia a una de varias clases en función de sus características y la similitud con los ejemplos de entrenamiento.</p>
+									</li>
+									<li>
+										<p><strong>Tipo de Algoritmo:</strong>k-NN es un algoritmo de aprendizaje supervisado en el que se utilizan datos etiquetados para tomar decisiones de clasificación o regresión.</p>
+									</li>
+									<li>
+										<p><strong>Utilidad:</strong>k-NN es útil en aplicaciones de clasificación como reconocimiento de patrones, filtrado de spam, diagnóstico médico y recomendación de productos.
+										</p>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<strong>Algoritmo Naive Bayes:</strong>  
+								<ul>
+									<li>
+										<p><strong>Descripción:</strong>El algoritmo Naive Bayes es un algoritmo de aprendizaje supervisado utilizado principalmente en tareas de clasificación y, en menor medida, en regresión. Está basado en el teorema de Bayes y hace suposiciones "ingenuas" sobre la independencia condicional de las características dado un valor de clase.</p>
+									</li>
+									<li>
+										<p><strong>Entradas:</strong> Contiene ejemplos de datos etiquetados, donde cada ejemplo consiste en características de entrada y su respectiva etiqueta de clase.</p>	
+									</li>
+									<li>
+										<p><strong>Salidas:</strong>La salida es la etiqueta de clase predicha para una instancia en función de las probabilidades calculadas.</p>
+									</li>
+									<li>
+										<p><strong>Cuándo se Usa:</strong> Se utiliza en problemas de clasificación, como clasificación de texto (por ejemplo, detección de spam), diagnóstico médico (por ejemplo, detección de enfermedades), y clasificación de documentos (por ejemplo, categorización de noticias).</p>
+									</li>
+									<li>
+										<p><strong>Tipo de Algoritmo:</strong>Naive Bayes es un algoritmo de aprendizaje supervisado que se basa en estadísticas y probabilidades para realizar predicciones de clase.</p>
+									</li>
+									<li>
+										<p><strong>Utilidad:</strong></p>
+										<ul id = "listaConGuiones">
+											<li>
+												<p>Naive Bayes es ampliamente utilizado en aplicaciones de procesamiento de lenguaje natural, como clasificación de texto, análisis de sentimientos y detección de spam.</p>
+											</li>
+											<li>
+												<p>Es un algoritmo rápido y eficiente, lo que lo hace adecuado para conjuntos de datos grandes.</p>
+											</li>
+											<li>
+												<p>Puede funcionar bien incluso en conjuntos de datos con muchas características (alta dimensionalidad).</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+
+
+
+
+						</ol>
+						
+                    </section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

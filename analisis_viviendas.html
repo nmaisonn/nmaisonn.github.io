@@ -25,7 +25,7 @@
 						</header>
 						<p>El caso de estudio se encuentra en el ámbito de la vivienda, específicamente, proporciona información sobre numerosas propiedades en la ciudad de Iowa, Estados Unidos. El objetivo fundamental de este análisis es predecir el precio de las viviendas en esta ciudad.</p>
                         <h2>Investigacion</h2>
-                        <p>Comencé mi investigación buscando datos pertinentes en el conjunto de datos subyacente, además de realizar una inspección visual de los datos proporcionados para evaluar si aportan valor para un análisis en profundidad. (<a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview" >Link</a> a la página).</p>
+                        <p>Comencé mi investigación buscando datos pertinentes en el conjunto de datos subyacente, además de realizar una inspección visual de los datos proporcionados para evaluar si aportan valor para un análisis en profundidad. (<a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview" >link</a> a la página).</p>
                         <h2>Descripcion</h2>
                         <p>Descripción del caso de estudio:
                             El caso de estudio se encuentra en el ámbito de la vivienda, específicamente, proporciona información sobre numerosas propiedades en la ciudad de Iowa, Estados Unidos. El objetivo fundamental de este análisis es predecir el precio de las viviendas en esta ciudad. Esto, a su vez, permite a las personas que buscan adquirir una vivienda obtener información sobre su vivienda ideal y anticipar su costo estimado.
@@ -33,21 +33,111 @@
                             </p>
                     </section>
 					<section id="two">
-						<h2>Pasos</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://docs.google.com/document/d/1CEy3Ys2m0spIId_zSTNpFt_I0K14M7et8RR_vYW7CfU/edit?usp=sharing"> <img src="images/fulls/DataDiscovery.jpg" class="cartas">Entendimiento de datos</a>
-								<p>Se presentan todos los atributos del dataset, con su descricpion y tipo de dato.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://docs.google.com/document/d/1kWRh23C55N9eMWRRNfBiZQmKvDCIybBFnJ1OQU5vAM8/edit?usp=sharing"><img src="images/fulls/DataPreparation.jpg" alt="" />Preparacion de datos</a>
-								<p>Preparando datos para tener un mejor aprendizaje en el modelo de ML.
-                                </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://docs.google.com/document/d/1xODXfQhA3-PYynqbnpde0zqIAnECLcf3AiVzfkU_WP8/edit?usp=sharing"><img src="images/fulls/LinearRegression.jpg" alt="" />Algoritmo Aplicado</a>
-								<p>Se utilizo Regresion linear como algoritmo de prediccion.</p>
-							</article>
+						<div>
+							<h2>Listado de Atributos</h2>
+							<p>El dataset cuenta con 80 atributos, mas informacion de los mismos acceder al siguiente <a href="https://docs.google.com/document/d/1CEy3Ys2m0spIId_zSTNpFt_I0K14M7et8RR_vYW7CfU/edit?usp=sharing">link</a></p>	
+						</div>
+						<hr>
+						<div>
+							<h2>Preparacion de Datos</h2>
+							<p>La preparación de datos es un pilar fundamental en la creación exitosa de modelos de aprendizaje automático, ya que garantiza la calidad, integridad y adecuación de los datos para el entrenamiento y la evaluación de los modelos. Este proceso abarca desde la limpieza y la imputación de datos faltantes hasta la selección de características relevantes, la normalización, el manejo de desequilibrios de clases y la división adecuada de conjuntos de datos. Una preparación de datos cuidadosa y eficiente es esencial para obtener modelos confiables y precisos, evitando errores y sesgos que podrían comprometer los resultados y las decisiones basadas en el aprendizaje automático.</p>
+							<h3>Quitando Atributos muy correlacionados y poco relevantes</h3>
+							<p>Se revisó que atributos tienen alta correlación y eran poco relevantes a la hora de predecir el precio de una vivienda. Al quitar estos atributos, se aseguró una mayor precisión a la hora de  entrenar el modelo. Estos atributos podrían interferir en el aprendizaje del modelo ya que proporcionaban ruido e información poco relevante que el modelo quizás tomaba como importante cuando en realidad no lo es.</p>
+							<p>Los atributos que se quitaron de la lista de 80 atributos son los siguientes:</p>
+							<ul id = "listaConGuiones">
+								<li>MSSubClass</li>
+								<li>1stFirSF</li>
+								<li>FullBath</li>
+								<li>HalfBath</li>
+								<li>TotRmsAbvGrd</li>
+								<li>GarageArea</li>
+								<li>OpenPorchSF</li>
+								<li>MoSold</li>
+								<li>YrSold</li>
+								<li>Id</li>
+								<li>Street</li>
+								<li>Alley</li>
+								<li>Utilities</li>
+								<li>LandSlope</li>
+								<li>Condition2</li>
+								<li>RoofMatl</li>
+								<li>Heating</li>
+								<li>CentralAir</li>
+								<li>Electrical</li>
+								<li>LowQualFinSf</li>
+								<li>BsmHalfBath</li>
+								<li>KitchenAbvGr</li>
+								<li>Functional</li>
+								<li>GarageCond</li>
+								<li>PavedDrive</li>
+								<li>3SsnPorch</li>
+								<li>ScreenPorch</li>
+								<li>PoolArea</li>
+								<li>PoolQC</li>
+								<li>MiscFeature</li>
+								<li>MiscVal</li>									  
+							</ul>
+							<h3>Normalización y trató de datos</h3>
+							<p>Además de quitar algunos atributos, se pasaron todos los atributos a numéricos para que el algoritmo sea más eficiente. Trabajando con números en lugar de clases. Como también se quitan (En caso de que existan) todos los registros duplicados. Esto para que el algoritmo no procese todos los registros que pueden encontrarse repetidos. </p>
+							<h3>Partición de Dataset:</h3>
+							<p>Se particionó el dataset en un 70% para datos de entrenamiento y un 30% para datos de test. Esto debido a que el dataset proporcionado para datos de prueba que se encuentran en la página, presentaba algunos problemas a la hora de importarlo debido al tipado de los datos.</p>
+							<div>
+								<h3>Preparación de datos Rapidminer:</h3>
+								<p>Como se puede visualizar en la siguiente imagen, el proceso está compuesto del dataset con los datos. Seguido de un subproceso de Selección de atributos, otro subproceso de preparación y modificación de datos y por último un último operador para particionar el dataset.</p>
+								<div>
+									<img src="images/dataset1/img1.png" alt="">
+								</div>
+								<h4>SubProceso Selección de Atributos:</h4>
+								<p>Como se mencionó previamente, se realizó una limpieza de atributos para descartar los menos significativos. COmo también se marcó cual es la variable objetivo en el proceso(SalePrice)</p>
+								<div>
+									<img src="images/dataset1/img2.png" alt="">
+								</div>
+								<h4>SubProceso Preparacion y Modificacion de datos:</h4>
+								<p>En este subproceso, se modificaron todos los atributos que estaban representados con clases por valores numéricos. Esto para poder tener un mejor apredizaje. También se quitan todos los registros duplicados para que no se procesen 2 veces.</p>
+								<div>
+									<img src="images/dataset1/img3.png" alt="">
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div>
+							<h2>Algoritmo Utilizado para Predicción del Precio de las Viviendas</h2>
+							<h3>Regresión Lineal</h3>
+							<p><strong>Descripción:</strong></p>
+							<p>La regresión lineal es un algoritmo de aprendizaje automático utilizado para modelar la relación entre una variable dependiente (la variable que queremos predecir) y una o más variables independientes (atributos) mediante una ecuación lineal. El objetivo es encontrar la línea recta (en el caso de una sola característica) o un hiperplano (en el caso de múltiples características) que mejor se ajuste a los datos.</p>
+
+							<p><strong>Entradas:</strong></p>
+							<p>Variables Independientes: Son las entradas del modelo y representan las características o atributos de los datos. Pueden ser una o varias, dependiendo de la complejidad del problema.</p>
+
+							<p><strong>Salidas:</strong></p>
+							<p>Variable Dependiente (Variable Objetivo): Es la salida del modelo y representa la variable que se desea predecir.</p>
+
+							<p><strong>Cuándo se Usa:</strong></p>
+							<p>La regresión lineal se utiliza cuando se sospecha que existe una relación lineal o aproximadamente lineal entre las características y la variable objetivo.
+							Es adecuada para problemas de regresión, donde se busca predecir un valor numérico continuo, como el precio de una casa, los ingresos de una persona o la temperatura.</p>
+
+							<p><strong>Tipo de Algoritmo:</strong></p>
+							<p>La regresión lineal es un algoritmo de aprendizaje supervisado, ya que se basa en datos etiquetados para aprender la relación entre las variables.</p>
+
+							<p><strong>Utilidad:</strong></p>
+							<p>La regresión lineal es ampliamente utilizada en estadísticas y aprendizaje automático para modelar y predecir relaciones lineales en datos.
+							Es útil para comprender la relación entre las variables y hacer predicciones basadas en esa relación.
+							Puede ser utilizado en aplicaciones prácticas como la predicción de precios de bienes raíces, análisis de tendencias económicas, pronóstico del tiempo y más.</p>
+
+							<h3>Elección del algoritmo:</h3>
+							<p>Previamente, en los primeros pasos del análisis del caso de estudio. Se realizó una investigación para ver distintos algoritmos que fueran comúnmente utilizados para casos de predicción de precios a partir de una gran cantidad de atributos. Por ello, llegué a la conclusión que la regresión lineal es una técnica ampliamente utilizada en problemas de predicción de precios, y sus beneficios son clave en este tipo de contextos.
+							En primer lugar, la regresión lineal es adecuada cuando existe una relación lineal aparente o razonable entre las características de entrada y la variable objetivo, en este caso, el precio de las viviendas. Esto significa que, si hay una correlación o una tendencia lineal entre las características seleccionadas y el precio de las viviendas, la regresión lineal puede capturar y cuantificar esta relación de manera efectiva.
+							La filtración y selección cuidadosamente las características relevantes ayudó a asegurar que la relación lineal fuera más evidente, lo que respalda aún más la elección de la regresión lineal.
+							Además, la regresión lineal es computacionalmente eficiente y fácil de implementar, lo que facilita su aplicación y ajuste en grandes conjuntos de datos, como los relacionados con bienes raíces.</p>
+							
+							<h3>Modelo en RapidMiner:</h3>
+							<p>Como se puede visualizar en la siguiente imagen, contamos con un operador de regresión lineal luego de que toda la data esté preparada y lista para ser evaluada.</p>
+							<div><img src="images/dataset1/img4.png" alt=""></div>
+							<p>Al mirar detalladamente la siguiente imagen, podemos ver que la elección de este algoritmo fue bastante acertada ya que la predicción del precio de las viviendas se acerca bastante al valor real</p>
+							<div><img src="images/dataset1/img5.png" alt=""></div>
+							<p>También podemos prestarle atención a la gráfica que fácilmente nos genera la herramienta Rapidminer para ver como hay una similitud entre los valores predecidos y los valores que ya teníamos.</p>
+							<div><img src="images/dataset1/img6.png" alt=""></div>
+							<p>Quitando algunos casos que claramente hay mayor discrepancia entre los precios. En la mayoría de los casos la predicción es acertada.</p>
 						</div>
 					</section>
 		<!-- Scripts -->
